@@ -1,0 +1,30 @@
+{% extends 'todolist/base.html' %}
+
+{% block title %} Category {% endblock %}
+
+{% block body_block %}
+
+<div class="card">
+    <div class="card-header">
+        <h5 class="card-title">Category Details #{{category.id}}</h5>
+    </div>
+    <div class="card-body">
+        <dl class="row">
+          <dt class="col-sm-3">Category Name</dt>
+          <dd class="col-sm-9">{{ category.name }}</dd>
+        </dl>
+    </div>
+    <br/>
+
+        <div class="card-body">
+            {% for task in category.task_set.all %}
+                <dl class="row">
+                  <dt class="col-sm-3">Task Description</dt>
+                  <dd class="col-sm-9">{{ task.description }}</dd>
+                  <dd class="col-sm-9">{{ task.start_date }}</dd>
+                </dl>
+            {% endfor %}
+        </div>
+</div>
+
+{% endblock %}
