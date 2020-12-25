@@ -1,9 +1,6 @@
 # todo app with docker
 <br/>
-First you would create a dir for this project and in it:</br>
-1). clone the repo https://github.com/ljupcho/docker-nginx-python2-db-redis<br/>
-2). clone the project https://github.com/ljupcho/todo<br/>
-3). <b>cd docker-nginx-python2-db-redis</b> && <b>./scripts/startup.sh</b><br/>
+
 This should create all the docker containers and set up everything, including insallation of the packages in requirements.txt files for both the web and consumers. they are set up with uwsgi with nginx proxy. using redis to store jobs/tasks for a the celery queue. docker-compose.yml file is the main file for building the docker services/containers.
 <br/><br/>
 The consumers are kept alive using supervisor that runs the celery worker commands.
