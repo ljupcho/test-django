@@ -25,7 +25,7 @@ DATABASE_PATH = os.path.join(PROJECT_PATH, 'rango.db')
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ''
+SECRET_KEY = '_yz=p4l-)*p1zs4+#5z!oo(e$)j-e)yx#rg*41%6)scl8odw_a'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False

@@ -13,6 +13,7 @@ class Group(models.Model):
 	city= models.CharField(max_length=255)
 	created_at = models.DateTimeField()
 	updated_at = models.DateTimeField()
+	deleted_at = models.DateTimeField(db_index=True,default=None, blank=True, null=True)
 
 class User(models.Model):
 	first_name= models.CharField(max_length=255)
@@ -22,6 +23,7 @@ class User(models.Model):
 	group = models.ForeignKey(Group,on_delete=models.CASCADE,related_name="group")
 	created_at = models.DateTimeField()
 	updated_at = models.DateTimeField()
+	deleted_at = models.DateTimeField(db_index=True,default=None, blank=True, null=True)
 
 class Post(models.Model):
 	title= models.CharField(max_length=255)
@@ -29,6 +31,7 @@ class Post(models.Model):
 	user = models.ForeignKey(User,on_delete=models.CASCADE,related_name="posts")
 	created_at = models.DateTimeField()
 	updated_at = models.DateTimeField()
+	deleted_at = models.DateTimeField(db_index=True,default=None, blank=True, null=True)
 
 class Category(models.Model):
 	name = models.CharField(max_length=100)
